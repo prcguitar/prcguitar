@@ -28,11 +28,14 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 1.2rem;
-  text-decoration: none;  /* remove underline */
-  color: inherit;         /* inherit black or dark color */
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
+  line-height: 1; /* prevent extra vertical spacing */
 }
 
 .nav-links a {
@@ -62,14 +65,34 @@ body {
   width: 100%;
 }
 
+
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  line-height: 1;
+  height: 100%;
 }
 
+.hamburger i {
+  font-size: 1.3rem; 
+  vertical-align: middle;
+}
+
+
 .close-menu {
-  display: none;
+  display: none; /* hidden by default (desktop) */
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.close-menu i {
+  font-size: 1.3rem;  /* same size as hamburger */
+  vertical-align: middle;
 }
 
 .site-content {
@@ -243,13 +266,14 @@ h2 {
 }
 
 /* About Section */
+
 .about {
   background-color: #fefefe;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: var(--space-sm);
+.about h2,
+.about .section-subtitle {
+  text-align: center;   /* only heading & subtitle centered */
 }
 
 .about-content {
@@ -270,6 +294,7 @@ h2 {
   font-size: 1.2rem;
   line-height: 1.8;
   padding: 1rem;
+  text-align: justify;
 }
 
 .about-image img {
@@ -292,16 +317,20 @@ h2 {
   margin-bottom: var(--space-sm);
 }
 
+
 .section-subtitle {
   font-size: 1.2rem;
-  color: #555;
-  margin: var(--space-lg);
+  color: #000;       /* darker */
+  font-weight: 400;  /* normal weight for paragraph-like feel */
+  margin: 1.5rem 0;
+  line-height: 1.8;  /* match about paragraph */
 }
 
 .contact-options {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 0 !important;
 }
 
 .contact-btn {
@@ -316,6 +345,7 @@ h2 {
   align-items: center;
   gap: 0.8rem;
   transition: background-color 0.3s ease;
+  margin-top: 0!important;
 }
 
 .contact-btn:hover {
@@ -357,7 +387,6 @@ footer {
 footer a {
   text-decoration: none;
   color: #000;
-  font-weight: 500;
 }
 
 .footer-item img {
@@ -403,18 +432,51 @@ footer a {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .close-menu {
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: 300;
-    color: #000;
     display: block;
+  }
+
+  h1 {
+    font-size: 2.5rem;       /* smaller than desktop */
+    line-height: 1.2;
+    padding: 0 1rem;         /* prevent text hugging edges */
+  }
+
+   .hero-subtext {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 0 1rem; /* prevent edge overflow */
+  }
+
+    .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem; /* smaller gap */
+  }
+
+  .about-text {
+    padding: 0;              /* remove side padding */
+    margin: 0 auto;          /* center horizontally */
+    max-width: 90%;          /* prevent edge overflow */
+  }
+
+  .about-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px; /* smaller image on mobile */
+  }
+
+  button,
+  .contact-btn {
+    font-size: 1.2rem;       /* slightly smaller */
+    padding: 0.75rem 1.75rem;
+  }
+
+   .copyright {
+    font-size: 1rem;  /* keep text readable */
   }
 }
 
@@ -425,14 +487,90 @@ footer a {
     padding: 0.75rem 1.5rem;
   }
 
-  h1 {
-    font-size: 2rem;
+ h1 {
+    font-size: 1.8rem;       /* mobile-friendly headline */
+    line-height: 1.3;
+    padding: 0 0.5rem;
   }
+
 
   h2 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
+
+    .nav-links a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    line-height: 1.4; /* improve readability */
+    margin: 0.75rem 0;
+    padding: 0 0.5rem;
+  }
+
+   .review-gallery {
+    gap: 0.75rem;        /* tighter spacing between images */
+  }
+
+  .review-gallery img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 250px;   /* smaller height for mobile */
+    margin: 0 auto;      /* center align */
+  }
+
+  #reviews button {
+    margin-top: 1.5rem !important; /* reduce the gap */
+  }
+
+  .about-text {
+    font-size: 1rem;     /* smaller than desktop */
+    line-height: 1.6;    /* tighter line spacing */
+  }
+
+  .about-content {
+    gap: 1.5rem; /* even tighter gap */
+  }
+
+  .section-subtitle {
+    font-size: 1rem;   /* shrink subtitle text */
+    margin: 1.5rem 0;  /* reduce vertical spacing for balance */
+  }
+
+    footer {
+    padding: var(--space-md) var(--space-sm); /* reduce padding */
+  }
+
+  .footer-links {
+    gap: 1rem;              /* tighter spacing */
+    margin-top: 2rem;       /* reduce top margin */
+  }
+
+  .footer-item img {
+    width: 100px;           /* smaller thumbnails */
+    height: 100px;
+  }
+
+  footer a {
+    font-size: 0.85rem;
+  }
+
+  footer button {
+    font-size: 1rem;        /* smaller CTA button */
+    padding: 0.6rem 1.2rem;
+    margin-top: 2rem;       /* less vertical spacing */
+  }
+
+  .copyright {
+    margin: 2rem 0 0;       /* reduce spacing */
+  font-size: 0.85rem;     /* slightly smaller text */
+  }
+
+
 }
+
 
 
