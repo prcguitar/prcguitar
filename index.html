@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRC GUITAR</title>
+  <link rel="icon" type="image/png" href="your-hero-image.jpg">
+  <link rel="preload" as="image" href="your-hero-image.jpg">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+<header class="navbar">
+  <a href="#hero" class="logo">PRC GUITAR</a>
+
+  <!-- Slide-in Menu -->
+  <nav class="nav-links">
+    <span class="close-menu" aria-label="Close menu"> <i class="fa-solid fa-xmark"></i> </span>
+    <a href="#students">Students</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+</header>
+
+
+<main class="site-content">
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>I teach you to play Guitar <br/> like a Professional</h1>
+    <img src="your-hero-image.jpg" alt="Guitarist" class="hero-img" />
+    <p class="hero-subtext">1-on-1 Online Guitar Lessons for Kids and Adults</p>
+    <a href="https://calendly.com/priyanshu-guitarlessons/15min" target="_blank" rel="noopener noreferrer">
+    <button class="spaced">Schedule your Free Intro Lesson</button> </a>
+  </section>
+
+  <!-- Students Section -->
+  <section id="students" class="students">
+    <h2 class="spaced">Students</h2>
+    <p class="section-subtitle">Performances by students from around the world</p>
+    <div class="videos">
+      <iframe class="vertical" src="https://www.youtube.com/embed/yykjIflYTIg" title="Shorts 1" allowfullscreen></iframe>
+      <iframe class="horizontal" src="https://www.youtube.com/embed/u9qUfMCvd80" title="Full Video" allowfullscreen></iframe>
+      <iframe class="vertical" src="https://www.youtube.com/embed/wfW7U4UNF0I" title="Shorts 2" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews">
+    <h2 class="spaced">Reviews</h2>
+    <p class="section-subtitle">Testimonials by the students and parents</p>
+    <div class="review-gallery">
+      <img src="review1.png" alt="Review 1">
+      <img src="review2.png" alt="Review 2">
+      <img src="review3.png" alt="Review 3">
+      <img src="review4.png" alt="Review 4">
+      <img src="review5.png" alt="Review 5">
+      <img src="review6.png" alt="Review 6">
+    </div>
+    <a href="https://calendly.com/priyanshu-guitarlessons/15min" target="_blank" rel="noopener noreferrer">
+    <button id="buttonstyle2" class="spaced">Schedule your Free Intro Lesson</button> </a>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="spaced">About</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Priyanshu is certified with Merit in Electric Guitar Performance from Rockschool.
+          With over a decade of guitar experience and 400+ lessons taught online in 2024 alone,
+          he has been offering online guitar lessons for more than 4 years. He trains students up to
+          the highest technical level, with learners based globally — from India to Los Angeles, London,
+          Netherlands, Switzerland, Romania, Paris, and beyond.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="your-about-image.jpg" alt="Priyanshu with Guitar" />
+      </div>
+    </div>
+  </section>
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2 class="spaced">Get in Touch</h2>
+  <p class="section-subtitle">Have a question or want to book a lesson? Reach out!</p>
+  
+  <div class="contact-options">
+    <a href="https://wa.me/918860532357?text=Hi%2C+I%27m+interested+in+your+guitar+lessons" 
+       target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <button onclick="copyEmail()" class="contact-btn email" aria-label="Copy email address">
+      <i class="fa-solid fa-envelope"></i> Email
+    </button>
+
+    <a href="https://www.instagram.com/prcguitar/" 
+       target="_blank" rel="noopener noreferrer" class="contact-btn instagram" aria-label="Visit Instagram profile">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+  </div>
+  
+  <p id="copy-message" class="copy-message" aria-live="polite"></p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <div class="footer-item">
+        <a href="#students">
+        <img src="students-thumb.jpg" alt="Students" />
+        <p>Students</p>
+      </a>
+      </div>
+      <div class="footer-item">
+        <a href="#reviews">
+        <img src="reviews-thumb.jpg" alt="Reviews" />
+        <p>Reviews</p>
+      </a>
+      </div>
+      <div class="footer-item">
+        <a href="#about">
+        <img src="your-about-image.jpg" alt="About" />
+        <p>About</p>
+      </a>
+      </div>
+    </div>
+    <a href="https://calendly.com/priyanshu-guitarlessons/15min" target="_blank" rel="noopener noreferrer">
+    <button>Schedule your Free Intro Lesson</button> </a>
+    <p class="copyright">&copy; PRC GUITAR</p>
+  </footer>
+  </main>
+
+  <!-- Calendly Embed -->
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("priyanshu.guitarlessons@gmail.com");
+      alert("Email copied to clipboard!");
+    }
+  </script>
+
+  <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const closeMenu = document.querySelector('.close-menu');
+
+  // Open menu
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.add('active');
+  });
+
+  // Close menu with X
+  closeMenu.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
+
+</body>
+</html>
